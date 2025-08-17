@@ -1,153 +1,120 @@
-# Chat AI App
+# Quirky AI Chat App 🎭
 
-A modern AI-powered chat application built with **Stream Chat**, **OpenAI**, and **web search capabilities**. This full-stack application provides an intelligent writing assistant that can help with content creation, research, and real-time collaboration.
-
-## 🚀 Features
-
-- **Real-time Chat**: for seamless messaging
-- **AI Writing Assistant**: OpenAI GPT-4 integration for intelligent content generation
-- **Web Search**: Live web search capabilities using Tavily API for current information
-- **Modern UI**: Beautiful React interface with dark/light theme support
-- **Writing Prompts**: Categorized writing prompts for business, content, communication, and creative tasks
-- **Agent Management**: Dynamic AI agent lifecycle management
-- **Secure Authentication**: JWT-based token authentication
-- **Responsive Design**: Mobile-first design with Tailwind CSS
-
-## 🏗️ Architecture
-
-### Backend (`nodejs-ai-assistant/`)
-
-- **Node.js/Express** server
-- **Stream Chat** server-side integration
-- **OpenAI API** for AI responses
-- **Tavily API** for web search functionality
-- Agent management system with automatic cleanup
-
-### Frontend (`react-stream-ai-assistant/`)
-
-- **React** with TypeScript
-- **Stream Chat React** components
-- **Tailwind CSS** + **shadcn/ui** for modern styling
-- **Vite** for fast development and building
-
-
-
-### Core Concepts
-
-1. **Stream Chat Client**: Handles all chat operations and real-time updates
-2. **Channels**: Individual chat rooms where messages are exchanged
-3. **Users**: Authenticated participants in the chat
-4. **Messages**: Text, files, reactions, and custom data
-5. **Tokens**: JWT-based authentication for secure access
-
-### Integration Flow
-
-```mermaid
-graph TD
-    A[Frontend React App] --> B[Stream Chat React Components]
-    B --> C[Stream Chat API]
-    C --> D[Backend Node.js Server]
-    D --> E[OpenAI API]
-    D --> F[Tavily Web Search]
-    D --> G[AI Agent Management]
-```
-
-### Key Features Used
-
-- **Real-time Messaging**: Instant message delivery and updates
-- **User Presence**: Online/offline status indicators
-- **Channel Management**: Create, join, and manage chat channels
-- **Message Threading**: Support for threaded conversations
-- **File Uploads**: Share images and documents
-- **Custom Fields**: Extended message and user data
-- **Webhooks**: Server-side event handling
-
-## 🤖 AI Agent System
-
-The application features a sophisticated AI agent management system:
-
-### Agent Lifecycle
-
-1. **Creation**: AI agents are created per channel when requested
-2. **Initialization**: OpenAI assistant setup with web search capabilities
-3. **Message Handling**: Processes user messages and generates responses
-4. **Web Search**: Automatically searches the web for current information
-5. **Cleanup**: Automatic disposal after inactivity
-
-### Agent Capabilities
-
-- **Content Writing**: Various writing tasks from business to creative
-- **Web Research**: Live search for current information and facts
-- **Context Awareness**: Maintains conversation context
-- **Customizable Prompts**: Specialized writing assistance
-
-## 🎨 UI Components
-
-The frontend uses modern UI components built with:
-
-- **Radix UI**: Accessible component primitives
-- **Tailwind CSS**: Utility-first CSS framework
-- **shadcn/ui**: Beautiful, customizable components
-- **Lucide React**: Modern icon library
-- **Dark Mode Support**: System preference detection
-
-## 📡 API Endpoints
-
-### Backend Routes
-
-- `GET /` - Health check and server status
-- `POST /start-ai-agent` - Initialize AI agent for a channel
-- `POST /stop-ai-agent` - Stop and cleanup AI agent
-- `GET /agent-status` - Check AI agent status
-- `POST /token` - Generate user authentication tokens
-
-## 🔒 Security Features
-
-- **JWT Authentication**: Secure token-based authentication
-- **Environment Variables**: Sensitive data protection
-- **CORS Configuration**: Cross-origin request security
-- **Token Expiration**: Automatic token refresh system
-- **Input Validation**: Server-side validation for all requests
-
-```
-
-## 📚 Technologies Used
-
-### Backend
-
-- **Node.js** - Runtime environment
-- **Express** - Web framework
-- **Stream Chat** - Real-time messaging
-- **OpenAI** - AI language model
-- **Axios** - HTTP client
-- **CORS** - Cross-origin resource sharing
-- **TypeScript** - Type safety
-
-### Frontend
-
-- **React** - UI library
-- **TypeScript** - Type safety
-- **Vite** - Build tool
-- **Stream Chat React** - Chat UI components
-- **Tailwind CSS** - Styling
-- **Radix UI** - Accessible components
-- **React Hook Form** - Form handling
-- **React Router** - Navigation
-
-## 🤝 Contributing
-
-1. Fork the repository
-2. Create a feature branch
-3. Make your changes
-4. Test thoroughly
-5. Submit a pull request
-
-
-## 🆘 Support
-
-For support and questions:
-- Create an issue in this repository
+A modern AI-powered chat application built with **Stream Chat**, **Groq/OpenAI**, and **live web search**.  
+This full-stack app acts as a quirky and smart writing assistant to help with content creation, research, and real-time collaboration.
 
 ---
 
-Built with ❤️ using GetStream.io, OpenAI, and modern web technologies.
+## ✨ Features
+
+- **⚡ Real-time Chat** – smooth messaging with instant updates  
+- **🤖 AI Writing Assistant** – powered by Groq/OpenAI for fast, intelligent responses  
+- **🔍 Web Search** – fetches current information directly in chat  
+- **🎨 Modern UI** – sleek React interface with dark & light themes  
+- **📝 Writing Prompts** – prebuilt prompts for business, content, communication, and creativity  
+- **🧑‍🤝‍🧑 Agent System** – AI agents that can join, leave, and manage conversations dynamically  
+- **🔐 Secure Auth** – JWT-based authentication  
+- **📱 Responsive** – mobile-first design with Tailwind CSS  
+
+---
+
+## 🏗️ Architecture Overview
+
+### Backend (`nodejs-ai-assistant/`)
+
+- **Node.js/Express** backend  
+- **Stream Chat** integration  
+- **Groq/OpenAI API** for intelligent responses  
+- **Tavily API** for live search  
+- Agent lifecycle management with cleanup  
+
+### Frontend (`react-stream-ai-assistant/`)
+
+- **React + TypeScript**  
+- **Stream Chat React** components  
+- **Tailwind CSS + shadcn/ui** for styling  
+- **Vite** for blazing-fast builds  
+
+---
+
+### 🔄 Flow
+
+```mermaid
+graph TD
+    A[React Frontend] --> B[Stream Chat Components]
+    B --> C[Stream Chat API]
+    C --> D[Node.js Backend]
+    D --> E[Groq/OpenAI API]
+    D --> F[Tavily Search]
+    D --> G[AI Agent Lifecycle]
+```
+
+---
+
+## 🧠 AI Agent System
+
+Agents in **Quirky AI Chat App** can:  
+- Write content in multiple styles  
+- Search the web for real-time info  
+- Keep track of context in conversations  
+- Respond with creativity and precision  
+- Self-cleanup after inactivity  
+
+---
+
+## 🎨 UI Components
+
+- **Radix UI** – accessible primitives  
+- **Tailwind CSS** – modern utility-first styling  
+- **shadcn/ui** – customizable UI elements  
+- **Lucide React** – icon library  
+- **Dark/Light mode** – auto system detection  
+
+---
+
+## 📡 API Endpoints
+
+- `GET /` – health check  
+- `POST /start-ai-agent` – spin up an agent for a channel  
+- `POST /stop-ai-agent` – stop and clean up  
+- `GET /agent-status` – check agent status  
+- `POST /token` – issue JWT tokens  
+
+---
+
+## 🛡 Security Highlights
+
+- JWT authentication  
+- Environment variable config  
+- CORS setup  
+- Token expiration & refresh  
+- Input validation  
+
+---
+
+## 📚 Tech Stack
+
+**Backend:** Node.js, Express, Stream Chat, Groq/OpenAI, Tavily, TypeScript  
+**Frontend:** React, TypeScript, Vite, Tailwind, Radix UI, shadcn/ui, Stream Chat React  
+
+---
+
+## 🤝 Contribution Guide
+
+1. Fork this repo  
+2. Create a new branch  
+3. Add your feature/fix  
+4. Test thoroughly  
+5. Submit a PR 🚀  
+
+---
+
+## 🆘 Support
+
+For questions/issues:  
+- Open an issue in this repo  
+
+---
+
+Built with 💡 using **GetStream.io, OpenAI, and modern web technologies.**
+
