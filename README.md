@@ -1,6 +1,6 @@
 # Quirky AI Chat App 🎭
 
-A modern AI-powered chat application built with **Stream Chat**, **Groq/OpenAI**, and **live web search**.  
+A modern AI-powered chat application built with **Stream Chat**, **OpenAI**, and **live web search**.  
 This full-stack app acts as a quirky and smart writing assistant to help with content creation, research, and real-time collaboration.
 
 ---
